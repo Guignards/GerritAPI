@@ -75,7 +75,7 @@ def write_results_to_csv(results, file_path):
         for row in results:
             writer.writerow(row)
 
-def main():
+def compareToCSV():
     d = date.today()
     json_file_path = f"gerrit_users_{d}.json"
     csv_file_path = input("Path to Zebra Employee list as CSV: ")
@@ -94,5 +94,4 @@ def main():
     write_results_to_csv(results, results_file_path)
 
 if __name__ == "__main__":
-
-    main()
+    compareToCSV()
